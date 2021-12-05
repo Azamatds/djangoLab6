@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+    PassTitle
+{% endblock %}
+
+{% block content %}
+
+
+      <section class="section-2" style="margin-bottom: 25px">
+            <div class="container py-5">
+              <div class="row">
+                <div class="col-lg-5 py-5 m-auto text-center">
+                  <h1>New Books And CD</h1>
+                  <br>
+                  <h5 style="color:red">Art, education - everything is found in reading.</h5>
+                  <br>
+                  <h6>Ybyrai Altynsarin</h6>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px">
+                {% for i in books %}
+              <div class="col-lg-3 text-center ">
+                <div class="card border-0 bg-light mb-2">
+                  <div class="card-body">
+                    <img src="{{ i.bookUrl }}" class="img-fluid" alt="">
+                  </div>
+                </div>
+{#                <h6>Book1#}
+                    <h6>{{ i.bookName }}</h6>
+                <p>99.9$</p>
+{#                <div class="rating">#}
+{#                  <span>&#9734;</span>#}
+{#                  <span>&#9734;</span>#}
+{#                  <span>&#9734;</span>#}
+{#                  <span>&#9734;</span>#}
+{#                  <span>&#9734;</span>#}
+{#                </div>#}
+              </div>
+                {%  endfor %}
+
+
+            </div>
+            </div>
+
+</section>
+{% endblock %}

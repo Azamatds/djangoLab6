@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+    PassTitle
+{% endblock %}
+
+{% block content %}
+<ul>
+        {% for lan in langs %}
+        <li style="list-style-type: none">{{ lan }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
